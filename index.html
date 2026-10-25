@@ -4,40 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudyPlanner</title>
+    <title>StudyPlanner - Accueil</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="top-header">
+        <a href="index.html" class="brand">🎓 StudyPlanner</a>
+        <span class="header-icon">📚</span>
+    </header>
 
-   
-<header>
-    <div>
-        <h1>🎓 StudyPlanner</h1>
-        <p>Organise tes études, une tâche à la fois !</p>
-    </div>
-    <div style="font-size: 45px;">📚</div>
-</header>
-
-
-    <main>
-        <section class="task-form">
-            <h2>Ajouter une tâche</h2>
-
-            <input
-                type="text"
-                id="taskInput"
-                placeholder="Exemple : Réviser JavaScript"
-            >
-
-            <button id="addTaskButton">Ajouter</button>
+    <main class="container">
+        <section class="welcome">
+            <p class="eyebrow">TON ESPACE ÉTUDIANT</p>
+            <h1>Bonjour ! 💜</h1>
+            <p>Que veux-tu faire aujourd'hui ?</p>
         </section>
 
-        <section class="task-list">
-            <h2>Mes tâches</h2>
-            <ul id="taskList"></ul>
+        <section class="home-options">
+            <a href="notes.html" class="home-card notes-card">
+                <span class="card-icon">📝</span>
+                <h2>Mes notes</h2>
+                <p>Écris tes cours, organise tes idées et crée des listes.</p>
+                <span class="card-link">Ouvrir mes notes →</span>
+            </a>
+
+            <a href="tasks.html" class="home-card tasks-card">
+                <span class="card-icon">✅</span>
+                <h2>Mes tâches</h2>
+                <p>Planifie ton travail et suis ta progression.</p>
+                <span class="card-link">Ouvrir mes tâches →</span>
+            </a>
         </section>
+
+        <footer>StudyPlanner · Un petit pas chaque jour 💜</footer>
     </main>
-
-    <script src="script.js"></script>
 </body>
 </html>

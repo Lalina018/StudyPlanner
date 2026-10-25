@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyPlanner - Mes tâches</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="top-header">
+        <a href="index.html" class="brand">🎓 StudyPlanner</a>
+        <a href="index.html" class="back-link">← Accueil</a>
+    </header>
+
+    <main class="container">
+        <section class="page-heading">
+            <p class="eyebrow">ORGANISATION</p>
+            <h1>Mes tâches ✅</h1>
+            <p>Une tâche à la fois, tu vas y arriver !</p>
+        </section>
+
+        <section class="panel">
+            <h2>Ajouter une tâche</h2>
+            <form id="taskForm">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Ex. : Réviser JavaScript"
+                    aria-label="Nouvelle tâche"
+                    required
+                >
+                <button type="submit" id="addTaskButton">+ Ajouter</button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>Ma liste de tâches</h2>
+            <p id="taskCount" class="muted"></p>
+            <ul id="taskList" class="task-list"></ul>
+        </section>
+    </main>
+</body>
+</html>

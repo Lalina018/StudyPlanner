@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyPlanner - Mes notes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="notes.js" defer></script>
+</head>
+<body>
+    <header class="top-header">
+        <a href="index.html" class="brand">🎓 StudyPlanner</a>
+        <a href="index.html" class="back-link">← Accueil</a>
+    </header>
+
+    <main class="container">
+        <section class="page-heading">
+            <p class="eyebrow">TON CARNET NUMÉRIQUE</p>
+            <h1>Mes notes 📝</h1>
+            <p>Écris tes idées, tes cours et tes rappels.</p>
+        </section>
+
+        <div class="notes-layout">
+            <aside class="panel notes-sidebar">
+                <button id="newNoteButton" class="primary-button full-width">
+                    + Nouvelle note
+                </button>
+                <h2>Mes feuilles</h2>
+                <div id="notesList"></div>
+            </aside>
+
+            <section class="panel note-editor">
+                <label for="noteTitle">Titre de la note</label>
+                <input
+                    id="noteTitle"
+                    type="text"
+                    placeholder="Ex. : Révision JavaScript"
+                >
+
+                <div class="list-tools">
+                    <button type="button" id="numberedButton" class="tool-button">
+                        1. Liste numérotée
+                    </button>
+                    <button type="button" id="checklistButton" class="tool-button">
+                        ☑ Liste à cocher
+                    </button>
+                </div>
+
+                <label for="noteContent">Contenu de ta note</label>
+                <textarea
+                    id="noteContent"
+                    placeholder="Écris ici tes cours, tes idées ou tes rappels..."
+                    rows="12"
+                ></textarea>
+
+                <div id="checklistEditor" class="checklist-editor" hidden>
+                    <h3>Ma liste à cocher</h3>
+                    <form id="checklistForm">
+                        <input
+                            id="checklistInput"
+                            type="text"
+                            placeholder="Ajouter un élément..."
+                        >
+                        <button type="submit" class="primary-button">Ajouter</button>
+                    </form>
+                    <ul id="checklistItems"></ul>
+                </div>
+
+                <div class="note-footer">
+                    <span id="saveStatus" class="muted">Prêt à écrire</span>
+                    <button id="deleteNoteButton" class="delete-button">
+                        Supprimer la note
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
